@@ -1,0 +1,54 @@
+.logo {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-self: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo__icon {
+    cursor: pointer;
+    animation: logoPlay 600ms ease-in-out infinite alternate;
+    transition: scale 0.2s ease;
+
+    &:hover {
+        scale: 1.2;
+
+        @include tablet {
+            scale: none;
+        }
+    }
+}
+
+@keyframes logoPlay {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: translateY(2px) rotate(4deg)
+    }
+}
+
+.logo__text {
+    font-size: 18px;
+    font-weight: 500;
+    animation: logoTextJump 600ms ease-in-out infinite alternate;
+    
+    @include tablet {
+		font-size: 16px;
+	}
+
+    @include mobile {
+        font-size: 14px;
+    }
+}
+
+@keyframes logoTextJump {
+	0% {
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(2px);
+	}
+}
+

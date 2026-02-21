@@ -1,0 +1,195 @@
+.feature-card {
+    overflow: hidden;
+    position: relative;
+
+    padding: 20px;
+    background-color: var(--sky);
+    border-radius: 16px;
+
+    // Mobile Ситуативная
+    @media (max-width: 662px) {
+        max-width: 403px;
+        width: 100%;
+    }
+
+    &:nth-child(2) {
+
+        // Mobile
+        @media (max-width: 622px) {
+            text-align: center;
+        }
+    }
+}
+
+.feature-card__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 19;
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+        background-color: rgba(255,255,255,0.1);
+    }
+}
+
+.feature-card__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-card__heading-with-arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature-card__content {
+    height: 100%;
+    position: relative;
+    z-index: 9;
+
+    display: grid;
+    gap: 20px;
+
+    @include mobile {
+        gap: 12px;
+    }
+}
+
+.feature-card__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.37;
+
+    @include mobile {
+        font-size: 20px;
+    }
+
+    // Mobile
+    @media (max-width: 662px) {
+        font-size: 18px;
+    }
+
+}
+
+.feature-card__desc {
+    color: var(--grey-dark);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.38;
+
+    @include mobile {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+}
+
+// Модификаторы
+.feature-card__title--white {
+    color: var(--white);
+}
+
+.feature-card__content--text {
+    height: auto;
+    
+    // Mobile
+    @media (max-width: 662px) {
+        text-align: center;
+    }
+}
+
+.feature-card__content--bottom {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.feature-card--gradient {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180.00deg, rgba(0, 0, 0, 0) 79%, rgba(0, 0, 0, 0.6) 100%);
+    }
+}
+
+.feature-card--gradient-top {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180.00deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 36%);
+    }
+}
+
+.feature-card--1 {
+    aspect-ratio: 397 / 300;
+
+    @include tablet {
+        aspect-ratio: 380 / 300;
+    }
+
+    @media (max-width: 662px) {
+        aspect-ratio: 362 / 260;
+    }
+}
+
+.feature-card--3 {
+    @media (max-width: 662px) {
+        aspect-ratio: 362 / 260;
+    }
+}
+
+.feature-card--4 {
+    aspect-ratio: 187 / 220;
+
+    @media (max-width: 662px) {
+        aspect-ratio: 362 / 260;
+    }
+}
+
+
+// Grid sizes 
+@for $i from 1 through 12 {
+    .feature-card--col-#{$i}-desktop {
+        grid-column: span #{$i};
+    }
+}
+
+@for $i from 1 through 12 {
+    .feature-card--col-#{$i}-tablet {
+        @include tablet {
+            grid-column: span #{$i};
+        }
+
+        @include mobile {
+            grid-column: span 2;
+        }
+    }
+}
+
+.feature-card--col-2-mobile {
+    @include mobile {
+        grid-column: span 1;
+    }
+}

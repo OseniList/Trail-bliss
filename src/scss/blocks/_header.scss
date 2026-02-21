@@ -1,0 +1,85 @@
+.header {
+	padding-top: 40px;
+}
+
+.header__row {
+	position: relative;
+	min-height: 88px;
+	padding: 24px 40px;
+
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+    justify-items: end;
+
+	background-color: var(--cream-lite);
+	border-radius: 60px;
+}
+
+.header__list {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+
+	@include mobile {
+		display: none;
+	}
+}
+
+.header__list-item {
+	font-size: 18px;
+	font-weight: 500;
+}		
+
+.header__link-item {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 110%;
+
+		width: 0;
+		height: 2px;
+		background-color: var(--grey-dark);
+		transition: width 0.2s ease;
+	}
+
+	&:hover::before {
+		width: 100%;
+	}
+
+	@include tablet {
+		font-size: 16px;
+	}
+} 
+
+.header__mobile-btn {
+	position: relative;
+	z-index: 999;
+	display: none;
+
+	@include mobile {
+		display: block;
+	}
+}
+
+.header__link-item.button {
+	padding: 8px 14px;
+	width: 124px;
+	height: 40px;
+
+	border: 1px solid var(--black);
+	border-radius: 100px;
+	transition: background-color 200ms ease-in, color 0.2s ease-in;
+
+	&:hover {
+		color: var(--white);
+		background-color: var(--orange);
+	}
+
+	// У кнопки убираем underline
+	&::before {
+		display: none;
+	}
+}

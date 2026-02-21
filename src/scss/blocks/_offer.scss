@@ -1,0 +1,37 @@
+.offer {
+    overflow: hidden;
+    padding: 80px 0;
+    background-color: var(--cream-lite);
+}
+
+.offer__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 52px;
+}
+
+.offer__title {
+    max-width: 608px;
+}
+
+.offer__controls {
+    display: flex;
+    gap: 12px;
+}
+
+/* Swiper */
+
+.offers__swiper-wrapper {
+    padding-left: 40px;
+    
+    padding-left: calc(var(--container-padding) *-1);
+    padding-right: calc(var(--container-padding) *-1);
+
+    .swiper {
+        overflow: visible;
+    }
+}
+
+

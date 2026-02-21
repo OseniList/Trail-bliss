@@ -1,0 +1,33 @@
+.testimonials-card {
+    padding: 20px 30px;
+    max-width: 360px;
+
+    border-radius: 12px;
+    background-color: var(--white);
+
+    display: grid;
+    gap: 16px;
+
+    @include tablet {
+        padding: 15px 20px;
+    }
+}
+
+.testimonials-card__text {
+    font-size: 16px;
+}
+
+.testimonials-card__profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonials-card__author-name {
+    font-size: 16px;
+}
+
+.testimonials-card__author-location {
+    color: var(--grey-dark);
+    font-size: 14px;
+}

@@ -1,0 +1,21 @@
+.btn-next {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-image: url('./../img/icons/arrow-next.svg');
+    
+    transition: background-image 150ms ease-in;
+    
+    &:hover {
+        background-image: url('./../img/icons/arrow-next-hover.svg');
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
+
+        @include mobile {
+            position: static;
+        }
+    }
+}

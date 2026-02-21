@@ -1,0 +1,9 @@
+.swiper-hero {
+    max-width: 1270px;
+    overflow: hidden;
+    border-radius: 38px;
+
+    @include mobile {
+        border-radius: 20px;
+    }
+}

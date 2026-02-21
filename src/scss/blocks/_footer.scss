@@ -1,0 +1,170 @@
+.footer {
+	padding: 40px;
+}
+
+.footer__plate {
+	padding: 60px;
+	background-color: var(--cream-lite);
+}
+
+.footer__columns {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	align-items: start;
+	gap: 24px;
+	margin-bottom: 40px;
+
+	@include tablet {
+		grid-template-columns: repeat(9, 1fr);
+	}
+
+	// Mobile
+	@media (max-width: 899px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+}
+
+.footer__addres {
+	text-wrap: pretty;
+	grid-column: span 3;
+	display: grid;
+	gap: 8px;
+
+	@media (max-width: 899px) {
+		text-align: center;
+	}
+}
+
+.footer__column {
+	grid-column: span 2;
+	display: grid;
+	gap: 12px;
+
+	a {
+		display: block;
+		font-size: 14px;
+
+		@media (max-width: 899px) {
+			text-align: center;
+			font-weight: 500;
+		}
+	}
+}
+
+.footer__column-title {
+	font-weight: 500;
+	font-size: 18px;
+
+	@media (max-width: 899px) {
+		text-align: center;
+		font-size: 16px;
+	}
+}
+
+.footer__contact {
+	grid-column: span 3;
+
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	text-wrap: pretty;
+	font-size: 24px;
+	font-weight: 500;
+
+	@include laptop {
+		font-size: 20px;
+	}
+
+	@include tablet {
+		grid-column: 1 / span 9;
+	}
+
+	@media (max-width: 899px) {
+		flex-direction: column;
+		gap: 12px;
+
+		font-size: 18px;
+		max-width: 180px;
+		text-align: center;
+	}
+}
+
+.footer__copyright-wrapper {
+	display: flex;
+	flex-shrink: 0;
+	justify-content: space-between;
+
+	@media (max-width: 899px) {
+		flex-direction: column-reverse;
+		align-items: center;
+		gap: 20px;
+	}
+}
+
+.footer__copyright {
+	font-size: 14px;
+
+	@media (max-width: 899px) {
+		text-align: center;
+	}
+}
+
+.footer__socials {
+	display: flex;
+	gap: 24px;
+	flex-shrink: 0;
+
+	// Mobile
+	@media (max-width: 320px) {
+		gap: 15px;
+	}
+
+	a {
+		display: inline-flex;
+	}
+}
+
+.footer__contact-icon {
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+
+	border: solid 3px;
+	border-radius: 30px;
+	background-image: url('../img/icons/footer-icon.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@media (max-width: 899px) {
+		width: 32px;
+		height: 32px;
+		background-image: url('../img/icons/footer-icon-mobile.svg');
+	}
+}
+
+// Поведение логотипа когда он в footer
+.footer .logo {
+	justify-self: start;
+
+	@media (max-width: 899px) {
+		grid-template-columns: auto;
+		justify-self: center;
+	}
+}
+
+.footer .logo__icon {
+	justify-self: center;
+}
+
+.footer .logo__text {
+	font-size: 20px;
+
+	@media (max-width: 899px) {
+		font-size: 26px;
+	}
+}

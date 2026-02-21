@@ -1,0 +1,36 @@
+.feature-card-autoplay-absolute {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 40px;
+    height: 40px;
+
+    background-color: var(--orange);
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 200ms linear;
+
+    &::before {
+        content: '';
+        position: absolute;
+
+        width: 24px;
+        height: 24px;
+
+        background-image: url('./../img/icons/play.svg');
+    }
+
+    &:hover {
+        background-color: var(--grey-dark);
+    }
+
+    @include mobileS {
+        width: 35px;
+        height: 35px;
+    }
+}

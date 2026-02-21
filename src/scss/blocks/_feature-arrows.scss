@@ -1,0 +1,72 @@
+.feature-card-arrow {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    
+    background-color: var(--orange);
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 200ms linear;
+
+    &::before {
+        content: '';
+        position: absolute;
+
+        width: 19px;
+        height: 19px;
+
+        background-image: url('./../img/icons/arrow-up.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &:hover {
+        background-color: var(--grey-dark);
+    }
+
+    @include mobileS {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.feature-card-arrow-absolute {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+    
+    background-color: var(--orange);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 200ms linear;
+
+    &::before {
+        content: '';
+        position: absolute;
+
+        width: 19px;
+        height: 19px;
+
+        background-image: url('./../img/icons/arrow-up.svg');
+    }
+
+    &:hover {
+        background-color: var(--grey-dark);
+    }
+    
+    @include mobileS {
+        width: 30px;
+        height: 30px;
+    }
+}

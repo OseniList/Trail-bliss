@@ -1,0 +1,85 @@
+.btn-start {
+    padding-left: 24px;
+    overflow: hidden;
+    max-width: 204px;
+    height: 60px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    border: 1px solid var(--black);
+    border-radius: 100px;
+
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: color 200ms ease,
+                background-color 200ms ease-in,
+                padding-left 350ms ease 100ms;
+
+    // Стрелка arrow-right
+    &::after {
+        content: '';
+        position: relative;
+        right: -50%;
+        visibility: hidden;
+        
+        width: 24px;
+        height: 24px;
+
+        background-image: url('./../img/icons/arrow-right.svg');
+        background-position: center; /* x y */
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: background-image 200ms ease,
+                    right 350ms ease,
+                    visibility 0.2s ease-in;
+
+       
+    }
+
+    // Обертка
+    &:hover {
+        content: '';
+        color: var(--white);
+        background-color: var(--black);
+        padding-left: 0;
+
+        // менять стрелку after на белую
+        &::after {  
+            visibility: visible;
+            position: relative;
+            right: 0;
+            background-image: url('./../img/icons/arrow-right-hover.svg');
+            animation: arrowPlay 350ms 250ms linear infinite alternate;
+        }
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+
+    @include tablet {
+        font-size: 16px;
+    }
+
+    @include mobile {   
+        justify-self: center;
+        font-size: 14px;
+        width: 100%;
+        height: 50px;
+    }
+}
+
+// animation
+@keyframes arrowPlay {
+    from {
+        transform: translateX(-1px);
+    }
+    to {
+        transform: translateX(1px);
+    }
+}

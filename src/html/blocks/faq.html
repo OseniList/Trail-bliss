@@ -1,0 +1,20 @@
+<section class="faq">
+    <div class="container">
+        <div class="faq__title-wrapper">
+            <h2 class="faq__title title-2">Unforgettable Moments with unique Events</h2>
+        </div>
+
+        <div class="faq__grid">
+            <div class="faq__picture">
+                <img class="faq__img" src="./img/faq/01.jpg" alt="picture">
+            </div>
+            <div class="faq__content">
+                <div class="accordion-container" id="accordion-faq">
+
+                    @@loop('./components/accordion-item.html', './data/faq-accordion.json')
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

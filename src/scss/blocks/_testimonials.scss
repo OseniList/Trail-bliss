@@ -1,0 +1,71 @@
+.testimonials {
+    padding: 80px 0;
+    background: var(--cream-lite);
+
+    @include mobile {
+        padding: 40px 0;
+    }
+}
+
+.testimonials__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    @media(max-width: 1100px) {
+        flex-direction: column;
+    }
+}
+
+.testimonials__heading {
+    max-width: 400px;
+
+    @media(max-width: 1100px) {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+.testimonials__title {
+    margin-bottom: 24px;
+}
+
+.testimonials__desc {
+    margin-bottom: 50px;
+    color: var(--grey-dark);
+    font-size: 20px;
+    font-weight: 500;
+
+    @media(max-width: 1100px) {
+        margin-bottom: 20px;
+    }
+
+    @include mobile {
+        font-size: 18px;
+    }
+}
+
+// Лучше займись учебой и разработкой !!!!!!!!!!!!!!!!!!!!!
+
+.testimonials__controls {
+    display: flex;
+    gap: 12px;
+
+    @media(max-width: 1100px) {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
+
+.testimonials__swiper-wrapper {
+    max-width: 726px;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        max-width: 400px;
+    }
+}

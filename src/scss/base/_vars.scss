@@ -1,0 +1,47 @@
+:root {
+	--container-width: 1320px;
+	--container-padding: 40px;
+
+	--font-base: 'Manrope';
+	--font-accent: 'Manrope';
+	--font-titles: var(--font-accent);
+
+	--page-bg: #fff;
+	--text-color: var(--black);
+	--accent: #ac182c;
+	--link-color: #2578c8;
+
+	--laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+
+	/* цвета */
+	--white: #fff;
+	--grey-lite: #fafafa;
+	--grey-dark: #454444;
+	--black: #161616;
+	--orange: #ed952b;
+	--yellow: #fec86e;
+	--cream: #fbf1d6;
+	--cream-lite: #F7f5f0;
+	--sky: #d3f5fe;
+}
+
+.dark {
+	--page-bg: #252526;
+	--text-color: #fff;
+}
+
+/* container paddings media */
+@media (max-width: 1220px) {
+	:root {
+		--container-width: 100%;
+		--container-padding: 20px;
+	}
+}
+
+@media (max-width: 820px) {
+	:root {
+		--container-padding: 15px;
+	}
+}

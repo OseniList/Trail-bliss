@@ -1,0 +1,21 @@
+<section class="offer">
+    <div class="container-full">
+        <div class="offer__heading">
+            <h2 class="offer__title title-2">Unforgettable Moments with Unique Events</h2>
+            <div class="offer__controls">
+                @@include('./components/btn-prev.html', { id: 'offer-btn-prev' })
+                @@include('./components/btn-next.html', { id: 'offer-btn-next' })
+            </div>
+        </div>
+        <!-- section cards -->
+        <div class="offers__swiper-wrapper">
+            <!-- swiper -->
+            <div class="swiper swiper-offers" id="swiper-offers">
+                <div class="swiper-wrapper">
+                    <!-- slides -->
+                    @@loop('./components/card-offer-slide.html', './data/offers-cards.json')
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,31 @@
+<section class="testimonials">
+    <div class="container">
+        <div class="testimonials__wrapper">
+
+            <header class="testimonials__heading">
+                <h2 class="testimonials__title title-2">Your trusted travel partner</h2>
+    
+                <div class="testimonials__desc">
+                    <p>we offer a comprehensive range of travel solutions designed to make your adventures seamless and unforgettable</p>
+                </div>
+    
+                <div class="testimonials__controls">
+                    @@include('./components/btn-prev.html', { id: 'testimonials-btn-prev' })
+                    @@include('./components/btn-next.html', { id: 'testimonials-btn-next' })
+                </div>
+            </header>
+            
+            <!-- section cards -->
+            <div class="testimonials__swiper-wrapper">
+                <!-- swiper -->
+                <div class="swiper swiper-testimonials" id="swiper-testimonials">
+                    <div class="swiper-wrapper">
+                        <!-- slides -->
+                        @@loop('./components/swiper-testimonials.html', './data/testimonials-cards-review.json')
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
